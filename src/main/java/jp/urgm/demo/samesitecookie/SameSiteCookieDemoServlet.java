@@ -22,6 +22,7 @@ public class SameSiteCookieDemoServlet extends HttpServlet {
 
 		// 明示的なCookieの追加もしておく
 		Cookie cookie = new Cookie("demo", "foobar");
+		cookie.setComment("__SAME_SITE_NONE__");
 		resp.addCookie(cookie);
 
 		resp.setContentType("text/plain");
